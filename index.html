@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>My calculator</title>
         <link rel="stylesheet" href ="style.css">
+        <link rel="stylesheet" href="input.css">
         <link rel = "icon" href = "assets/imgs/calculator_ico.png" type = "image/x-icon">
     </head>
 
@@ -52,6 +53,33 @@
         </div>
 
         <hr style="max-width: 50vw;">
+        <h1 class="title_contact">Rate me here : </h1>
+        <div class="contact">
+            <form>
+                <div class="input-container">
+                  <input
+                    type="text"
+                    id="username"
+                    class="text-input"
+                    autocomplete="off"
+                    placeholder="Enter your username"
+                    required
+                  />
+                  <label class="label" for="username">Username</label>
+                </div>
+                <button class="Button js-button">Submit</button>
+              </form>
+              <div class="rating">
+
+                <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+
+              </div>
+        </div>
+        <hr style="max-width: 50vw;">
         <footer>
             <ul>
                 <li><a href="https://github.com/LucasHissinger" target="_blank"><img src="assets/imgs/github.png", alt="git"/></a></li>
@@ -65,4 +93,6 @@
         </footer>
     </body>
     <script src="script.js" defer></script>
+    <script src="input.js" defer></script>
+    <script src="button.js" defer></script>
 </html>
