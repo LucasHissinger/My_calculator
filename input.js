@@ -7,3 +7,11 @@ document.querySelectorAll(".text-input").forEach((element) => {
       }
     });
   });
+
+  let btn = document.querySelector(".sub");
+
+  btn.addEventListener("click", active);
+
+  function active() {
+    btn.classList.toggle("is_active");
+  }

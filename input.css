@@ -1,8 +1,9 @@
 .contact {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: row;
+  margin-top: 25px;
 }
 
 .title_contact {
@@ -77,7 +78,7 @@
   .rating {
     margin-bottom: 10px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     flex-direction: row-reverse;
     }
     
@@ -107,7 +108,83 @@
     .rating > input:checked ~ label:before{
     opacity:1;
     }
-    
+
     .rating:hover > input:checked ~ label:before{ 
     opacity: 0.4;
      }
+
+     .sub{
+      font-family: 'Ubuntu', sans-serif;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 170px;
+      height: 40px;
+      line-height: 1;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border: 3px solid #7AFFEF;
+      background: #272530;
+      color: #fff;
+      border-radius: 40px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all .35s;
+    }
+
+    .sub:hover{
+      background: #c485ff;
+      color: #fff;
+    }
+
+    .sub span{
+      opacity: 1;
+      visibility: visible;
+      transition: all .35s;
+    }
+
+    .success{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      border-radius: 50%;
+      z-index: 1;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .35s;
+    }
+
+    .success svg{
+      width: 20px;
+      height: 20px;
+      fill: #7AFFEF;
+      transform-origin: 50% 50%;
+      transform: translateY(-50%) rotate(0deg) scale(0);
+      transition: all .35s;
+    }
+
+    .sub.is_active{
+      pointer-events: none;
+      width: 40px;
+      height: 40px;
+      margin-right: 130px;
+    }
+
+    .sub.is_active .success{
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .sub.is_active .success svg{
+      margin-top: 50%;
+      transform: translateY(-50%) rotate(720deg) scale(1);
+    }
+
+    .sub.is_active span{
+      opacity: 0;
+      visibility: hidden;
+    }

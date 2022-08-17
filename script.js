@@ -9,7 +9,7 @@ window.addEventListener('load', FadeOut);
 let expression = ""
 let result = 0;
 let screen_value = document.getElementById('input');
-buttons = document.querySelectorAll('button');
+buttons = document.querySelectorAll('td button');
 for (item of buttons) {
     item.addEventListener('click', (e) => {
         button_text = e.target.innerText
